@@ -1,19 +1,17 @@
 import React from "react";
+import FilterByName from "./FilterByName";
+import FilterBySpecies from "./FilterBySpecies";
 
 function Filters(props) {
-  const handleChange = (ev) => {
-    props.handleFilter({
-      name: "name",
-      value: ev.target.value,
-    }); //preguntar si mejor hacerlo de la otra forma y coger el key
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
   };
 
   return (
-    <>
-      <label htmlFor="name" id="name">
-        <input type="text" name="name" onChange={handleChange} />
-      </label>
-    </>
+    <form onSubmit={handleSubmit}>
+      <FilterByName handleFilter={props.handleFilter} />
+      <FilterBySpecies handleFilter={props.handleFilter} />
+    </form>
   );
 }
 export default Filters;
