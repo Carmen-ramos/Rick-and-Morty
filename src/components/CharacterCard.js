@@ -1,6 +1,11 @@
-import React from "react";
-
-function PlantillaFunc() {
-  return <div>que tal?</div>;
+function CharacterCard(props) {
+  return (
+    <li>
+      <h2>{props.item.name}</h2>
+      <img src={props.item.image} alt={props.item.name} />
+      <p>{props.item.species}</p>
+    </li>
+  );
 }
-export default PlantillaFunc;
+
+export default CharacterCard;
