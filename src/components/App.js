@@ -44,10 +44,20 @@ function App() {
     return <CharacterDetail character={selectCharacter} />;
   };
 
+  const resetButton = () => {
+    setName("");
+    setSpecies("all");
+  };
+
   return (
     <div className="App">
       <h1>Rick and Morty</h1>
-      <Filters handleFilter={handleFilter} name={name} species={species} />
+      <Filters
+        handleFilter={handleFilter}
+        name={name}
+        species={species}
+        resetButton={resetButton}
+      />
 
       <Switch>
         <Route exact path="/">
