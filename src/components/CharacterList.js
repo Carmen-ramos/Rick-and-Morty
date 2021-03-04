@@ -13,13 +13,17 @@ function CharacterList(props) {
   });
   const CharacterUl = charactersSorted.map((item) => {
     return (
-      <li key={item.id}>
+      <li key={item.id} className="card">
         <CharacterCard item={item} />
       </li> /* characterul es un array por eso en return de abajo tenemos que hacer el conficional ternario y ponerle el lengh >0 para que pinte la lista */
     );
   });
 
-  return <ul>{CharacterUl.length > 0 ? CharacterUl : <p>No esta</p>}</ul>;
+  return (
+    <ul className="main__container">
+      {CharacterUl.length > 0 ? CharacterUl : <p>No esta</p>}
+    </ul>
+  );
 }
 
 export default CharacterList;

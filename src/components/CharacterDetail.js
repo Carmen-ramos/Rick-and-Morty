@@ -7,7 +7,6 @@ import CharacterList from "./CharacterList";
 
 function CharacterDetail(props) {
   console.log(props);
-
   if (props.character === undefined) {
     return <p>Character not found</p>;
   } else {
@@ -16,16 +15,32 @@ function CharacterDetail(props) {
       <>
         <section className="secDetail">
           <Link to="/">
-            <h3>Back</h3>
+            <h3 className="secDetail__return">Back</h3>
           </Link>
-          <img src={props.character.image} alt={props.character.name} />
-          <h2>Name: {props.character.name}</h2>
-          <p>Gender: {props.character.gender}</p>
-          <p>Status: {props.character.status}</p>
-          <p>Specie: {props.character.species}</p>
-          <p>Origin: {props.character.origin}</p>
-          <p>Location: {props.character.location}</p>
-          <p>Episodes: {episodesNumber}</p>
+          <img
+            className="secDetail__img"
+            src={props.character.image}
+            alt={props.character.name}
+          />
+          <h3 className="secDetail__title"> {props.character.name}</h3>
+          <div className="sectDetail__container">
+            <p className="secDetail__container--text">
+              Gender: {props.character.gender}
+            </p>
+            <p className="secDetail__container--text">
+              Status: {props.character.status}
+            </p>
+            <p className="secDetail__container--text">
+              Specie: {props.character.species}
+            </p>
+            <p className="secDetail__container--text">
+              Origin: {props.character.origin}
+            </p>
+            <p className="secDetail__container--text">
+              Location: {props.character.location}
+            </p>
+            <p className="secDetail__text">Episodes: {episodesNumber}</p>
+          </div>
         </section>
       </>
     );

@@ -25,12 +25,18 @@ function CharacterCard(props) {
   console.log(especiesIcon);
   return (
     <Link to={`/character/${props.item.id}`}>
-      <h2>{props.item.name};</h2>
-      <img src={props.item.image} alt={props.item.name} />
-      <p>{props.item.species}</p>
-      <span>{especiesIcon()}</span>
-      <p>{props.item.status}</p>
-      <span>{statusIcon()}</span>
+      <h2 className="card__title">{props.item.name}</h2>
+      <img className="card__img" src={props.item.image} alt={props.item.name} />
+      <div className="card__itemContainer">
+        <div className="card__itemContainer--species">
+          <p>{props.item.species}</p>
+          <span>{especiesIcon()}</span>
+        </div>
+        <div className="card__itemContainer--status">
+          <p>{props.item.status}</p>
+          <span>{statusIcon()}</span>
+        </div>
+      </div>
     </Link>
   );
 }

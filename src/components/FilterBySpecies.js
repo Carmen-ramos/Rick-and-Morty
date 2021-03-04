@@ -10,7 +10,7 @@ function FilterBySpecies(props) {
 
   return (
     <label htmlFor="species" className="main__form--select">
-      Species
+      Species:
       <select
         name="species"
         id="species"

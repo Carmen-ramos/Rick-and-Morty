@@ -7,29 +7,79 @@
   //display: flex;
 }
 .main {
+  width: 100%;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  // margin: 10%;
   &__form {
     padding: 20px;
     margin-top: 20px;
     border: 2px blue solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &--select {
-      border: 2px blue solid;
+      padding: 5px;
+      //border: 2px blue solid;
     }
     &--inputText {
-      border: 2px blue solid;
+      // border: 2px blue solid;
+      padding: 10px;
     }
     &--reset {
+      margin-top: 5px;
       padding: 5px;
       width: 50px;
       text-align: center;
       border-radius: 50%;
+      cursor: pointer;
     }
+  }
+  &__container {
+    background-color: #bef992;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*display: flex;
+    flex-wrap: wrap;
+    align-items: center;*/
+  }
+}
+
+//componente card
+.card {
+  border: 2px double yellow;
+  margin: 10px;
+  width: 250px;
+  padding: 10px;
+  &__title {
+    padding: 10px;
+  }
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+  &__itemContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 .secDetail {
   border: 2px solid red;
+  margin: 15px;
+  padding: 10px;
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+  &__title {
+    color: chartreuse;
+    margin: 10px;
+  }
+  &__container {
+    border: solid 2px blueviolet;
+  }
 }
 /*
 .section {
