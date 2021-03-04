@@ -10,7 +10,12 @@ function FilterByName(props) {
 
   return (
     <label htmlFor="name" id="name">
-      <input type="text" name="name" onChange={handleChange} />
+      <input
+        type="text"
+        name="name"
+        value={props.name}
+        onChange={handleChange}
+      />
     </label>
   );
 }

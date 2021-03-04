@@ -15,15 +15,12 @@ function App() {
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
-  console.log(characters);
+
   const handleFilter = (inputData) => {
-    console.log(inputData);
     if (inputData.key === "name") {
       setName(inputData.value);
-      console.log(name);
     } else if (inputData.key === "species") {
       setSpecies(inputData.value);
-      console.log(species);
     }
   };
 
@@ -40,23 +37,22 @@ function App() {
     });
 
   const renderDetail = (props) => {
-    console.log(props.match.params);
     const id = parseInt(props.match.params.id);
-    console.log(id);
     const selectCharacter = characters.find((character) => {
-      console.log(character.id === id);
-      console.log(character);
+      return character.id === id;
     });
-    console.log(selectCharacter);
-    return <CharacterDetail />;
+    return <CharacterDetail character={selectCharacter} />;
   };
 
   return (
     <div className="App">
       <h1>Rick and Morty</h1>
-      <Filters handleFilter={handleFilter} />
-      <CharacterList characters={filterCharacters} />
+      <Filters handleFilter={handleFilter} name={name} species={species} />
+
       <Switch>
+        <Route exact path="/">
+          <CharacterList characters={filterCharacters} name={name} />
+        </Route>
         <Route path="/character/:id" render={renderDetail} />
       </Switch>
     </div>

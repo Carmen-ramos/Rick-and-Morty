@@ -9,8 +9,11 @@ function Filters(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <FilterByName handleFilter={props.handleFilter} />
-      <FilterBySpecies handleFilter={props.handleFilter} />
+      <FilterByName handleFilter={props.handleFilter} name={props.name} />
+      <FilterBySpecies
+        handleFilter={props.handleFilter}
+        species={props.species}
+      />
     </form>
   );
 }

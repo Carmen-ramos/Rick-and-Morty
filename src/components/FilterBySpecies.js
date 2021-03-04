@@ -11,7 +11,12 @@ function FilterBySpecies(props) {
   return (
     <label htmlFor="species">
       Species
-      <select name="species" id="species" onChange={handleChange}>
+      <select
+        name="species"
+        id="species"
+        value={props.species}
+        onChange={handleChange}
+      >
         <option value="all">All</option>
         <option value="Human">Human</option>
         <option value="Alien">Alien</option>
