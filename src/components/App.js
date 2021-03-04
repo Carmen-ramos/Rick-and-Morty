@@ -9,26 +9,18 @@ import userEvent from "@testing-library/user-event";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
   const [species, setSpecies] = useState("all");
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
-  //preguntar por qué no funciona
-  characters.sort((a, b) => {
-    if (a > b) {
-      return 1;
-    }
-    if (a < b) {
-      return -1;
-    }
-    return 0;
-  });
-
+  console.log(characters);
   const handleFilter = (inputData) => {
+    console.log(inputData);
     if (inputData.key === "name") {
       setName(inputData.value);
+      console.log(name);
     } else if (inputData.key === "species") {
       setSpecies(inputData.value);
       console.log(species);
@@ -46,14 +38,14 @@ function App() {
         return character.species === species;
       }
     });
-  //console.log(filterCharacters);
 
   const renderDetail = (props) => {
-    // console.log(props.match.params.id);
-    const id = props.match.params.id;
-    // console.log(id);
+    console.log(props.match.params);
+    const id = parseInt(props.match.params.id);
+    console.log(id);
     const selectCharacter = characters.find((character) => {
-      // console.log(character.id === id);
+      console.log(character.id === id);
+      console.log(character);
     });
     console.log(selectCharacter);
     return <CharacterDetail />;

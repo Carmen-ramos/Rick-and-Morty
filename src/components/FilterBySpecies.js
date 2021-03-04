@@ -13,8 +13,8 @@ function FilterBySpecies(props) {
       Species
       <select name="species" id="species" onChange={handleChange}>
         <option value="all">All</option>
-        <option value="human">Human</option>
-        <option value="alien">Alien</option>
+        <option value="Human">Human</option>
+        <option value="Alien">Alien</option>
       </select>
     </label>
   );
