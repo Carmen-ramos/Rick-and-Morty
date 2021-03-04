@@ -2,9 +2,10 @@
   margin: 0;
   box-sizing: border-box;
   list-style-type: none;
-  /*padding: 20px;*/
 }
 
 body {
-  background-color: #222831;
+  background-image: url(../images/bk-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

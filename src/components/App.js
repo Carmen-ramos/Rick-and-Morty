@@ -5,6 +5,8 @@ import getDataFromApi from "../services/getDataFromApi";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import Header from "./Header";
+import Footer from "./Footer";
 import userEvent from "@testing-library/user-event";
 
 function App() {
@@ -50,22 +52,26 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Rick and Morty</h1>
-      <Filters
-        handleFilter={handleFilter}
-        name={name}
-        species={species}
-        resetButton={resetButton}
-      />
+    <>
+      <Header />
+      <main className="main">
+        <h1>Rick and Morty</h1>
+        <Filters
+          handleFilter={handleFilter}
+          name={name}
+          species={species}
+          resetButton={resetButton}
+        />
 
-      <Switch>
-        <Route exact path="/">
-          <CharacterList characters={filterCharacters} name={name} />
-        </Route>
-        <Route path="/character/:id" render={renderDetail} />
-      </Switch>
-    </div>
+        <Switch>
+          <Route exact path="/">
+            <CharacterList characters={filterCharacters} name={name} />
+          </Route>
+          <Route path="/character/:id" render={renderDetail} />
+        </Switch>
+      </main>
+      <Footer />
+    </>
   );
 }
 

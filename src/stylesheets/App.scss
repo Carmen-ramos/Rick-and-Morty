@@ -1,10 +1,32 @@
 .App {
-  text-align: center;
+  // text-align: center;
   height: 100vh;
   background-color: #222831;
   font-family: Roboto Slab;
   color: #bef992;
   //display: flex;
+}
+.main {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  &__form {
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px blue solid;
+    &--select {
+      border: 2px blue solid;
+    }
+    &--inputText {
+      border: 2px blue solid;
+    }
+    &--reset {
+      padding: 5px;
+      width: 50px;
+      text-align: center;
+      border-radius: 50%;
+    }
+  }
 }
 .secDetail {
   border: 2px solid red;
