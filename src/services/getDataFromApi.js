@@ -8,19 +8,6 @@ const getDataFromApi = () => {
     });
 };
 
-/*
-const getDataFromApi = () => {
-  return fetch(
-    "//raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json"
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      return data.results.map((character) => {
-        return character;
-      });
-    });
-};*/
-
 const cleanApiData = (data) => {
   return data.results.map((character) => {
     return {
@@ -33,8 +20,6 @@ const cleanApiData = (data) => {
       status: character.status,
       location: character.location.name,
       episode: character.episode,
-
-      //episodies: character.episodie
     };
   });
 };

@@ -4,20 +4,73 @@
   border: 2px solid red;
   margin: 15px;
   padding: 10px;
-  &__img {
-    width: 200px;
-    height: 200px;
+  border: groove 1em grey;
+  border-radius: 1em;
+  @include tablet {
+    display: Flex;
+    flex-direction: row;
   }
-  &__title {
-    color: chartreuse;
-    margin: 10px;
+  @include desktop1 {
+    display: Flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__titleContainer {
+    @include tablet {
+      margin: 10px 20px 10px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &--img {
+      width: 130px;
+      height: 130px;
+      border: 2px solid yellow;
+      @include tablet {
+        width: 250px;
+        height: 250px;
+      }
+      @include desktop1 {
+        width: 350px;
+        height: 350px;
+      }
+    }
+    &--title {
+      color: chartreuse;
+      margin: 10px;
+      @include tablet {
+        text-align: center;
+      }
+    }
   }
   &__container {
-    padding: 20px;
-    border: 2px solid red;
-    background-color: crimson;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //padding: 20px;
+
     &--text {
+      padding-bottom: 5px;
+      font-size: 20px;
       color: darkgreen;
+      background-color: rosybrown;
     }
+  }
+}
+.secDetail-return {
+  width: 100%;
+  padding: 5px;
+}
+
+.secNot {
+  width: 100%;
+  height: 100vh;
+  //poner en html
+  background-image: url(../images/imgfy.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  &__title {
+    font-size: 50px;
   }
 }

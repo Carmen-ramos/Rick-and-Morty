@@ -9,6 +9,7 @@
 }
 
 body {
+  font-family: Roboto Slab;
   @include tablet {
     background-image: url(../images/401073.jpg);
     background-repeat: no-repeat;

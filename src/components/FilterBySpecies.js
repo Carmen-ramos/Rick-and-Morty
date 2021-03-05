@@ -12,6 +12,7 @@ function FilterBySpecies(props) {
     <label htmlFor="species" className="main__form--select">
       Species:
       <select
+        className="block"
         name="species"
         id="species"
         value={props.species}

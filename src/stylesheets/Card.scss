@@ -5,8 +5,10 @@
   margin: 10px;
   width: 200px;
   padding: 5px;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px 0px rgba(236, 230, 230, 0.5);
   background-color: yellowgreen;
+  border: groove 1em grey;
+  border-radius: 1em;
   &__title {
     padding: 10px;
   }

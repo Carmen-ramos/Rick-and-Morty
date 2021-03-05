@@ -1,13 +1,24 @@
 @import "./mixin";
 
 .footer {
+  color: white;
   border-top: 2px solid white;
-  padding: 10px;
-  &__copyright {
-    margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  @include tablet {
+    padding: 2% 5% 2% 5%;
   }
+
   &__advise {
-    display: block;
     font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+    @include tablet {
+    }
+  }
+  &__copyright {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }

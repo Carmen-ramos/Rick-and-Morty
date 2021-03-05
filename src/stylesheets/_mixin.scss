@@ -4,8 +4,13 @@
   }
 }
 
-@mixin desktop {
-  @media all and (min-width: 1024px) {
+@mixin desktop2 {
+  @media all and (min-width: 1248px) {
+    @content;
+  }
+}
+@mixin desktop1 {
+  @media all and (min-width: 1000px) {
     @content;
   }
 }

@@ -12,6 +12,7 @@ function FilterByName(props) {
     <label htmlFor="name" id="name" className="main__form--inputText">
       Introduce your favourite character name:
       <input
+        className="input"
         type="text"
         name="name"
         value={props.name}
