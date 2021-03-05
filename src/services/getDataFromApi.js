@@ -4,21 +4,7 @@ const getDataFromApi = () => {
   )
     .then((response) => response.json())
     .then((data) => {
-      return data.results.map((character) => {
-        return {
-          id: character.id,
-          name: character.name,
-          species: character.species,
-          gender: character.gender,
-          origin: character.origin.name,
-          image: character.image,
-          status: character.status,
-          location: character.name,
-          episode: character.episode,
-
-          //episodies: character.episodie
-        };
-      });
+      return data;
     });
 };
 
@@ -35,7 +21,28 @@ const getDataFromApi = () => {
     });
 };*/
 
-export default getDataFromApi;
+const cleanApiData = (data) => {
+  return data.results.map((character) => {
+    return {
+      id: character.id,
+      name: character.name,
+      species: character.species,
+      gender: character.gender,
+      origin: character.origin.name,
+      image: character.image,
+      status: character.status,
+      location: character.location.name,
+      episode: character.episode,
+
+      //episodies: character.episodie
+    };
+  });
+};
+
+export default {
+  getDataFromApi: getDataFromApi,
+  cleanApiData: cleanApiData,
+};
 
 //Poner antes de subir,
 //https://rickandmortyapi.com/api/character

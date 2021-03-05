@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard";
+import "../stylesheets/Card.scss";
 
 function CharacterList(props) {
   console.log(props.name);

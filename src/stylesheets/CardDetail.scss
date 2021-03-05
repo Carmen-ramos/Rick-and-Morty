@@ -1,0 +1,23 @@
+@import "./mixin";
+
+.secDetail {
+  border: 2px solid red;
+  margin: 15px;
+  padding: 10px;
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+  &__title {
+    color: chartreuse;
+    margin: 10px;
+  }
+  &__container {
+    padding: 20px;
+    border: 2px solid red;
+    background-color: crimson;
+    &--text {
+      color: darkgreen;
+    }
+  }
+}

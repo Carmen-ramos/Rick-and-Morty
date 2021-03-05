@@ -1,7 +1,6 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-import CharacterList from "./CharacterList";
+import "../stylesheets/CardDetail.scss";
 
 //episodes es un array preguntar si necesito el numero de episodios o un listado de cada uno.
 
@@ -23,7 +22,7 @@ function CharacterDetail(props) {
             alt={props.character.name}
           />
           <h3 className="secDetail__title"> {props.character.name}</h3>
-          <div className="sectDetail__container">
+          <div className="secDetail__container">
             <p className="secDetail__container--text">
               Gender: {props.character.gender}
             </p>
@@ -39,7 +38,9 @@ function CharacterDetail(props) {
             <p className="secDetail__container--text">
               Location: {props.character.location}
             </p>
-            <p className="secDetail__text">Episodes: {episodesNumber}</p>
+            <p className="secDetail__container--text">
+              Episodes: {episodesNumber}
+            </p>
           </div>
         </section>
       </>

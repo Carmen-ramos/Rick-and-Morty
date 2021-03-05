@@ -25,7 +25,7 @@ function CharacterCard(props) {
   console.log(especiesIcon);
   return (
     <Link to={`/character/${props.item.id}`}>
-      <h2 className="card__title">{props.item.name}</h2>
+      <h3 className="card__title">{props.item.name}</h3>
       <img className="card__img" src={props.item.image} alt={props.item.name} />
       <div className="card__itemContainer">
         <div className="card__itemContainer--species">

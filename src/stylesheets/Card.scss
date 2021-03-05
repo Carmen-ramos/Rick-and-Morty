@@ -1,0 +1,22 @@
+@import "./mixin";
+
+.card {
+  border: 2px solid grey;
+  margin: 10px;
+  width: 200px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  background-color: yellowgreen;
+  &__title {
+    padding: 10px;
+  }
+  &__img {
+    width: 120px;
+    height: 120px;
+  }
+  &__itemContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

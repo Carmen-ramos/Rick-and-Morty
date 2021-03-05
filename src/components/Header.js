@@ -1,5 +1,6 @@
 import logo from "../images/logoheadermobile.png";
 import "../stylesheets/Header.scss";
+
 function Header() {
   return (
     <header className="header">
@@ -8,6 +9,7 @@ function Header() {
         src={logo}
         alt="Ricky and Morty header image"
       />
+      <h1>Rick and Morty</h1>
     </header>
   );
 }

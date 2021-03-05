@@ -1,3 +1,5 @@
+@import "./_mixin.scss";
+
 .App {
   // text-align: center;
   height: 100vh;
@@ -7,7 +9,9 @@
   //display: flex;
 }
 .main {
-  width: 100%;
+  margin-right: 10%;
+  margin-left: 10%;
+  // width: 100%;
   text-align: center;
   // margin: 10%;
   &__form {
@@ -35,58 +39,11 @@
     }
   }
   &__container {
-    background-color: #bef992;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    /*display: flex;
-    flex-wrap: wrap;
-    align-items: center;*/
+    background-color: rgba(255, 255, 255, 0.6);
+    display: grid;
+    justify-items: center;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
-
-//componente card
-.card {
-  border: 2px double yellow;
-  margin: 10px;
-  width: 250px;
-  padding: 10px;
-  &__title {
-    padding: 10px;
-  }
-  &__img {
-    width: 200px;
-    height: 200px;
-  }
-  &__itemContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-.secDetail {
-  border: 2px solid red;
-  margin: 15px;
-  padding: 10px;
-  &__img {
-    width: 200px;
-    height: 200px;
-  }
-  &__title {
-    color: chartreuse;
-    margin: 10px;
-  }
-  &__container {
-    border: solid 2px blueviolet;
-  }
-}
-/*
-.section {
-  width: 100px;
-  height: 100px;
-  border: 2px solid orange;
-  border-radius: 2%;
-  box-shadow: 0px 0px 5px 5px rgba(173, 166, 173, 1);
-}
-*/

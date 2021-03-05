@@ -1,7 +1,7 @@
 import "../stylesheets/App.scss";
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import getDataFromApi from "../services/getDataFromApi";
+import api from "../services/getDataFromApi";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
@@ -15,7 +15,10 @@ function App() {
   const [species, setSpecies] = useState("all");
 
   useEffect(() => {
-    getDataFromApi().then((data) => setCharacters(data));
+    api
+      .getDataFromApi()
+      .then((data) => api.cleanApiData(data)) // intercalamaos la limpieza de data con esta estructura.
+      .then((data) => setCharacters(data));
   }, []);
 
   const handleFilter = (inputData) => {
@@ -55,7 +58,6 @@ function App() {
     <>
       <Header />
       <main className="main">
-        <h1>Rick and Morty</h1>
         <Filters
           handleFilter={handleFilter}
           name={name}
