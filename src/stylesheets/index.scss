@@ -10,9 +10,12 @@
 
 body {
   font-family: Roboto Slab;
+  font-family: creepster;
+  background-image: url(../images/bk6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   @include tablet {
-    background-image: url(../images/401073.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }

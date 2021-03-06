@@ -18,10 +18,14 @@
   &__form {
     padding: 20px;
     margin-top: 20px;
-    border: 2px blue solid;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    background-color: rgba(70, 67, 67, 0.74);
+    border: groove 1em rgba(255, 255, 255, 0.6);
+    border-radius: 1em;
+
     &--select {
       padding: 5px;
       //border: 2px blue solid;
@@ -36,6 +40,7 @@
       width: 50px;
       text-align: center;
       border-radius: 50%;
+      box-shadow: 5px 5px 5px 0px rgba(236, 230, 230, 0.5);
       cursor: pointer;
     }
   }
@@ -47,7 +52,7 @@
   &__container {
     border: groove 1em grey;
     border-radius: 2em;
-    //background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     display: grid;
     justify-items: center;
     @include tablet {

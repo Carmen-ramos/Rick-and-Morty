@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard";
+import CharacterNotFound from "./CharacterNotFound";
 import "../stylesheets/Card.scss";
 
 function CharacterList(props) {
@@ -22,7 +23,7 @@ function CharacterList(props) {
 
   return (
     <ul className="main__container">
-      {CharacterUl.length > 0 ? CharacterUl : <p>No esta</p>}
+      {CharacterUl.length > 0 ? CharacterUl : <CharacterNotFound />}
     </ul>
   );
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/CardDetail.scss";
+import photo from "../images/imgfy.png";
+
+import retturn from "../images/retturn.png";
 
 //episodes es un array preguntar si necesito el numero de episodios o un listado de cada uno.
 
@@ -11,6 +14,8 @@ function CharacterDetail(props) {
       <div className="secNot">
         <section>
           <p className="secNot__title">Character not found</p>
+          <img src={photo} />
+          <p>The url is wrong, bitch check it</p>
         </section>
       </div>
     );
@@ -20,7 +25,12 @@ function CharacterDetail(props) {
       <>
         <section className="secDetail">
           <Link to="/">
-            <h3 className="secDetail-return">Back</h3>
+            <img
+              src={retturn}
+              alt="logo return home page"
+              className="secDetail__logo"
+            />
+            <p> Back</p>
           </Link>
 
           <div className="secDetail__titleContainer">
