@@ -1,6 +1,7 @@
 import React from "react";
 
 function FilterByOrigin(props) {
+  console.log(props);
   const handleChange = (ev) => {
     props.handleFilter({
       key: "origin",
@@ -8,7 +9,7 @@ function FilterByOrigin(props) {
     });
   };
 
-  const originList = props.origin.map((origin, i) => {
+  const originList = props.getOrigin.map((origin, i) => {
     return (
       <label key={i}>
         <input
