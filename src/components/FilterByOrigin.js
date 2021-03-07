@@ -8,14 +8,15 @@ function FilterByOrigin(props) {
     });
   };
 
-  const originList = props.origin.map((origin, i) => {
+  const originList = props.getorigin.map((origin, i) => {
     return (
-      <label>
+      <label key={i}>
         <input
           className="Checkbox"
           type="checkbox"
           name="origin"
           value={origin}
+          checked={props.origin.includes(origin)}
           onChange={handleChange}
         />
         {origin}

@@ -19,10 +19,11 @@ function App() {
   useEffect(() => {
     api
       .getDataFromApi()
-      .then((data) => api.cleanApiData(data)) // intercalamaos la limpieza de data con esta estructura.
+      .then((data) => api.cleanApiData(data))
       .then((data) => setCharacters(data));
   }, []);
 
+  // function to save value into status
   const handleFilter = (inputData) => {
     if (inputData.key === "name") {
       setName(inputData.value);
@@ -44,6 +45,7 @@ function App() {
   };
   console.log(origin);
 
+  //function to filters by name, species and origin.
   const filterCharacters = characters
     .filter((character) => {
       return character.name.toLowerCase().includes(name);
@@ -62,11 +64,13 @@ function App() {
       }
     });
 
+  //gettin the origin from ech character and save in the array
   const getOrigin = () => {
     const origins = characters.map((character) => character.origin);
     return [...new Set(origins)];
   };
 
+  // Function to render details card
   const renderDetail = (props) => {
     const id = parseInt(props.match.params.id);
     const selectCharacter = characters.find((character) => {
@@ -75,10 +79,12 @@ function App() {
     return <CharacterDetail character={selectCharacter} />;
   };
 
+  //Function to reset all the inputs in
   const resetButton = () => {
     setName("");
     setSpecies("all");
     setGender("all");
+    setOrigin([]);
   };
 
   return (
@@ -91,7 +97,8 @@ function App() {
             name={name}
             species={species}
             gender={gender}
-            origin={getOrigin()}
+            origin={origin}
+            getOrigin={getOrigin()}
             resetButton={resetButton}
           />
 
