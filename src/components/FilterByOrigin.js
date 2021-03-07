@@ -8,7 +8,7 @@ function FilterByOrigin(props) {
     });
   };
 
-  const originList = props.getorigin.map((origin, i) => {
+  const originList = props.origin.map((origin, i) => {
     return (
       <label key={i}>
         <input
