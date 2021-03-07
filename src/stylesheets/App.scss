@@ -27,6 +27,7 @@
     border-radius: 1em;
 
     &--select {
+      font-family: creepster;
       padding: 5px;
       //border: 2px blue solid;
     }
@@ -35,6 +36,7 @@
       padding: 10px;
     }
     &--reset {
+      font-family: creepster;
       margin-top: 5px;
       padding: 5px;
       width: 50px;
@@ -46,10 +48,12 @@
   }
   .block {
     display: block;
+    font-family: creepster;
   }
   //ul card container
 
   &__container {
+    padding: 10px;
     border: groove 1em grey;
     border-radius: 2em;
     background-color: rgba(255, 255, 255, 0.6);

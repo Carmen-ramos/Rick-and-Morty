@@ -57,22 +57,24 @@ function App() {
   return (
     <>
       <Header />
-      <main className="main">
-        <Filters
-          handleFilter={handleFilter}
-          name={name}
-          species={species}
-          resetButton={resetButton}
-        />
+      <div className="container-body">
+        <main className="main">
+          <Filters
+            handleFilter={handleFilter}
+            name={name}
+            species={species}
+            resetButton={resetButton}
+          />
 
-        <Switch>
-          <Route exact path="/">
-            <CharacterList characters={filterCharacters} name={name} />
-          </Route>
-          <Route path="/character/:id" render={renderDetail} />
-        </Switch>
-      </main>
-      <Footer />
+          <Switch>
+            <Route exact path="/">
+              <CharacterList characters={filterCharacters} name={name} />
+            </Route>
+            <Route path="/character/:id" render={renderDetail} />
+          </Switch>
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

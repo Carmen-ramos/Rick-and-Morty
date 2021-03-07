@@ -2,27 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function CharacterCard(props) {
-  console.log(props.item.status);
-
-  //intentar pasar a ternario
   const especiesIcon = () => {
     if (props.item.species === "Alien") {
-      return <i class="fas fa-pastafarianism"></i>;
+      return <i className="fas fa-pastafarianism"></i>;
     } else if (props.item.species === "Human") {
-      return <i class="fas fa-user-alt"></i>;
+      return <i className="fas fa-user-alt"></i>;
     }
   };
   const statusIcon = () => {
     if (props.item.status === "Alive") {
-      return <i class="far fa-laugh"></i>;
+      return <i className="far fa-laugh"></i>;
     } else if (props.item.status === "Dead") {
-      return <i class="far fa-dizzy"></i>;
+      return <i className="far fa-dizzy"></i>;
     } else {
-      return <i class="fas fa-question"></i>;
+      return <i className="fas fa-question"></i>;
     }
   };
 
-  console.log(especiesIcon);
   return (
     <Link to={`/character/${props.item.id}`}>
       <h3 className="card__title">{props.item.name}</h3>

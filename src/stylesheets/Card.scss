@@ -5,15 +5,19 @@
   margin: 10px;
   width: 200px;
   padding: 5px;
-  box-shadow: 5px 5px 5px 0px rgba(236, 230, 230, 0.5);
+  box-shadow: 5px 5px 5px 0px rgba(26, 19, 19, 0.5);
+  border-radius: 5%;
   background-image: url(../images/portal1.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  border: groove 1em grey;
-  border-radius: 1em;
+  border: groove 1em rgb(169, 218, 35);
+  background-position: center center;
+  &:hover {
+    transform: scale(1.1);
+  }
+
   &__title {
     padding: 10px;
-    color: rgb(45, 151, 201);
+    color: black;
   }
   &__img {
     width: 120px;
@@ -21,16 +25,30 @@
     border-radius: 40%;
   }
   &__itemContainer {
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 }
-/*
+
 .chacNot {
-  background-image: url(../images/notfound.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}*/
+  @include tablet {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  @include desktop1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  @include desktop2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  &__title {
+    font-size: 20px;
+  }
+  &__img {
+    width: 100%;
+  }
+}

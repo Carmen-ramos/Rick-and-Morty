@@ -1,20 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/CardDetail.scss";
-import photo from "../images/imgfy.png";
-
+import photo from "../images/scary.gif";
 import retturn from "../images/retturn.png";
 
 //episodes es un array preguntar si necesito el numero de episodios o un listado de cada uno.
 
 function CharacterDetail(props) {
-  console.log(props);
   if (props.character === undefined) {
     return (
       <div className="secNot">
         <section>
           <p className="secNot__title">Character not found</p>
-          <img src={photo} />
+          <img className="secNot__img" src={photo} />
           <p>The url is wrong, bitch check it</p>
         </section>
       </div>
