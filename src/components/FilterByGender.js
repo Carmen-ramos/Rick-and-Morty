@@ -3,24 +3,25 @@ import React from "react";
 function FilterBySpecies(props) {
   const handleChange = (ev) => {
     props.handleFilter({
-      key: "species",
+      key: "gender",
       value: ev.target.value,
     });
   };
 
   return (
-    <label htmlFor="species" className="main__form--select stylelabel">
-      Species:
+    <label htmlFor="gender" className="main__form--select stylelabel">
+      Gender:
       <select
         className="block"
-        name="species"
-        id="species"
-        value={props.species}
+        name="gender"
+        id="gender"
+        value={props.gender}
         onChange={handleChange}
       >
         <option value="all">All</option>
-        <option value="Human">Human</option>
-        <option value="Alien">Alien</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="unknown">Unknown</option>
       </select>
     </label>
   );

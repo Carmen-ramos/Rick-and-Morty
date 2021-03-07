@@ -4,8 +4,8 @@ import "../stylesheets/Card.scss";
 function CharacterNotFound() {
   return (
     <div className="chacNot">
-      <p className="chacNot">Character not found</p>
-      <img className="chacNot__img" src={photo} />
+      <p className="chacNot__title">Character not found</p>
+      <img className="chacNot__img" src={notfound} />
     </div>
   );
 }

@@ -11,9 +11,8 @@ function CharacterDetail(props) {
     return (
       <div className="secNot">
         <section>
-          <p className="secNot__title">Character not found</p>
+          <p className="secNot__title">Bitch, wrong url. Check it, Bitch</p>
           <img className="secNot__img" src={photo} />
-          <p>The url is wrong, bitch check it</p>
         </section>
       </div>
     );

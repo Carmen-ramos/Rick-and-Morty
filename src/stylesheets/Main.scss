@@ -1,10 +1,7 @@
 @import "./_mixin.scss";
 
 .App {
-  // text-align: center;
-  height: 100vh;
   background-color: #222831;
-  font-family: Roboto Slab;
 }
 .main {
   margin-right: 5%;
@@ -25,30 +22,53 @@
     background-color: rgba(70, 67, 67, 0.74);
     border: groove 1em rgba(255, 255, 255, 0.6);
     border-radius: 1em;
-
-    &--select {
-      font-family: creepster;
-      padding: 5px;
-      //border: 2px blue solid;
+    &--container {
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
     }
+
     &--inputText {
-      // border: 2px blue solid;
+      color: aqua;
+      margin: 5px;
       padding: 10px;
     }
+
+    &--check {
+      color: aqua;
+      font-size: 20px;
+      margin: 10px;
+      border-bottom: aqua 2px solid;
+    }
     &--reset {
+      margin: 10px;
       font-family: creepster;
       margin-top: 5px;
       padding: 5px;
       width: 50px;
       text-align: center;
       border-radius: 50%;
+      background-color: aqua;
+      color: white;
       box-shadow: 5px 5px 5px 0px rgba(236, 230, 230, 0.5);
       cursor: pointer;
     }
   }
+
+  .stylelabel {
+    color: aqua;
+    font-size: 20px;
+    margin: 10px;
+  }
   .block {
     display: block;
     font-family: creepster;
+    margin: 10px;
+    @include desktop1 {
+      margin: 20px;
+    }
   }
   //ul card container
 

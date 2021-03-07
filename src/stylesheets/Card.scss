@@ -17,7 +17,7 @@
 
   &__title {
     padding: 10px;
-    color: black;
+    color: aqua;
   }
   &__img {
     width: 120px;
@@ -25,7 +25,7 @@
     border-radius: 40%;
   }
   &__itemContainer {
-    color: black;
+    color: aqua;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -38,17 +38,24 @@
     grid-column-end: 3;
   }
   @include desktop1 {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
   @include desktop2 {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
   }
   &__title {
     font-size: 20px;
+    @include tablet {
+      font-size: 40px;
+    }
+    @include desktop1 {
+      font-size: 50px;
+    }
   }
   &__img {
     width: 100%;
+    border-radius: 5%;
   }
 }
