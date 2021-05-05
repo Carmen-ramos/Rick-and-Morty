@@ -2,17 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function CharacterCard(props) {
+  console.log(props);
   const especiesIcon = () => {
     if (props.item.species === "Alien") {
       return <i className="fas fa-pastafarianism"></i>;
-    } else if (props.item.species === "Human") {
+    } else if (props.item.species === "human") {
       return <i className="fas fa-user-alt"></i>;
     }
   };
   const statusIcon = () => {
-    if (props.item.status === "Alive") {
+    if (props.item.status === true) {
       return <i className="far fa-laugh"></i>;
-    } else if (props.item.status === "Dead") {
+    } else if (props.item.status === false) {
       return <i className="far fa-dizzy"></i>;
     } else {
       return <i className="fas fa-question"></i>;

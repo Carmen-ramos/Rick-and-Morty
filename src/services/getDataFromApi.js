@@ -1,7 +1,5 @@
 const getDataFromApi = () => {
-  return fetch(
-    "//raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json"
-  )
+  return fetch("http://hp-api.herokuapp.com/api/characters")
     .then((response) => response.json())
     .then((data) => {
       return data;
@@ -9,17 +7,17 @@ const getDataFromApi = () => {
 };
 
 const cleanApiData = (data) => {
-  return data.results.map((character) => {
+  return data.map((character) => {
     return {
-      id: character.id,
+      // id: character.id,
       name: character.name,
       species: character.species,
       gender: character.gender,
-      origin: character.origin.name,
+      origin: character.house,
       image: character.image,
-      status: character.status,
-      location: character.location.name,
-      episode: character.episode,
+      status: character.alive,
+      location: character.ancestry,
+      episode: character.actor,
     };
   });
 };

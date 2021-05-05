@@ -7,9 +7,9 @@
   padding: 5px;
   box-shadow: 5px 5px 5px 0px rgba(26, 19, 19, 0.5);
   border-radius: 5%;
-  background-image: url(../images/portal1.png);
+  background-image: url(../images/hp5.jpg);
   background-repeat: no-repeat;
-  border: groove 1em rgb(169, 218, 35);
+  border: solid 5px #efb810;
   background-position: center center;
   &:hover {
     transform: scale(1.1);
@@ -17,15 +17,15 @@
 
   &__title {
     padding: 10px;
-    color: aqua;
+    color: black;
   }
   &__img {
     width: 120px;
-    height: 120px;
-    border-radius: 40%;
+    // height: 120px;
+    border-radius: 10%;
   }
   &__itemContainer {
-    color: aqua;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

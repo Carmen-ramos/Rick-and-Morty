@@ -31,7 +31,7 @@ function App() {
       setSpecies(inputData.value);
     } else if (inputData.key === "gender") {
       setGender(inputData.value);
-    } else if (inputData.key === "origin") {
+    } else if (inputData.key === "house") {
       const indexOrigin = origin.indexOf(inputData.value);
       if (indexOrigin === -1) {
         const newOrigin = [...origin, inputData.value];
@@ -72,6 +72,7 @@ function App() {
 
   // Function to render details card
   const renderDetail = (props) => {
+    console.log(props);
     const id = parseInt(props.match.params.id);
     const selectCharacter = characters.find((character) => {
       return character.id === id;

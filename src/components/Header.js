@@ -1,4 +1,4 @@
-import logo from "../images/logo1.png";
+import logo from "../images/hp-logo.png";
 import "../stylesheets/Header.scss";
 
 function Header() {
