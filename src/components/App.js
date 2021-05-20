@@ -43,7 +43,6 @@ function App() {
       }
     }
   };
-  console.log(origin);
 
   //function to filters by name, species and origin.
   const filterCharacters = characters
@@ -73,11 +72,11 @@ function App() {
   // Function to render details card
   const renderDetail = (props) => {
     console.log(props);
-    const id = parseInt(props.match.params.id);
-    const selectCharacter = characters.find((character) => {
-      return character.id === id;
-    });
-    return <CharacterDetail character={selectCharacter} />;
+    //   const id = parseInt(props.match.params.id);
+    //   const selectCharacter = characters.find((character) => {
+    //     return character.id === id;
+    //   });
+    //   return <CharacterDetail character={selectCharacter} />;
   };
 
   //Function to reset all the inputs in

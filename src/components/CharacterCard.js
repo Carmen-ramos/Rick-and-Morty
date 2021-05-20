@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function CharacterCard(props) {
-  console.log(props);
   const especiesIcon = () => {
     if (props.item.species === "Alien") {
       return <i className="fas fa-pastafarianism"></i>;
